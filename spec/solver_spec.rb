@@ -13,6 +13,11 @@ describe Solver do
     expect(solver.factorial).to eq(1)
   end
 
+  it 'factorial of negative number raises an error' do
+    solver = Solver.new(-1)
+    expect { solver.factorial }.to raise_error('Factorial of negative number is not defined')
+  end
+
   it 'reverse a given string' do
     solver = Solver.new(5)
 
@@ -20,9 +25,9 @@ describe Solver do
   end
 
   it 'FizzBuzz returns Fizz when divisible by 3' do
-    solver = Solver.new(5)
+    solver = Solver.new(9)
 
-    expect(solver.fizzbuzz).to eq('5')
+    expect(solver.fizzbuzz).to eq('Fizz')
   end
 
   it 'FizzBuzz returns Buzz when divisible by 5' do

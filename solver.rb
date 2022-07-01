@@ -6,14 +6,14 @@ class Solver
   end
 
   def factorial
-    if @number == 0
+    if @number.zero?
       1
-    elsif @number < 0
-      raise "Cannot get factorial of negative value"
+    elsif @number.negative?
+      raise 'Factorial of negative number is not defined'
     else
-      digits =  1..@number
+      digits = 1..@number
       result = 1
-      digits.each {|number| result *= number}
+      digits.each { |number| result *= number }
       result
     end
   end
@@ -21,13 +21,14 @@ class Solver
   def reverse(string)
     string.reverse
   end
+
   def fizzbuzz
-    if @number % 3 == 0 && @number % 5 == 0
-      "FizzBuzz"
-    elsif @number % 3 == 0
-      "Fizz"
-    elsif @number % 5 == 0
-      "Buzz"
+    if (@number % 3).zero? && (@number % 5).zero?
+      'FizzBuzz'
+    elsif (@number % 3).zero?
+      'Fizz'
+    elsif (@number % 5).zero?
+      'Buzz'
     else
       @number.to_s
     end
