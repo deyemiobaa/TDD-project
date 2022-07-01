@@ -9,7 +9,6 @@ git clone  <https://github.com/deyemiobaa/tdd-project.git>
 ```
 - run ```cd tdd-project``` to enter the project folder
 - run `bundle install`
-- run `ruby main.rb` to launch console app
 
 ### Tests
 
